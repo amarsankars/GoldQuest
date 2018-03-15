@@ -1,0 +1,47 @@
+<div class="center-div-1">
+
+    <div *ngIf="stepIndex === 0">
+      <app-instructions></app-instructions>
+    </div>
+
+    <div *ngIf="questions && (stepIndex <= questions.length)">
+    
+      <div *ngIf="stepIndex > 0" style ="position: absolute; right:0;">
+        <h3 style="float: right; margin-right: 20px">Question {{ stepIndex }} of {{questions.length}}</h3> <br>
+      </div>
+      <br>
+      <br>
+     
+      <div class="card card-inverse card-primary mb-3 text-center" *ngFor="let question of questions">  
+        <div *ngIf="question.index === stepIndex">
+          <h2> {{ question.index }}. {{ question.title }} </h2>
+          <div class="grid grid-pad">
+            <label *ngFor="let choice of question.choices" class="col-1-4">
+              <!-- <div class="module"> -->
+                <div class="btn" data-toggle="buttons" ng-init="userChoice=1">
+                  <button class="btn btn-info btn-lg" [ngClass]="{
+                    'btn-primary':question.userChoice === choice,
+                    'btn-info':question.userChoice !== choice
+                  }" (click)="setUserChoice(question, choice)">{{choice}}</button>
+                </div>
+              <!-- </div> -->
+            </label> <br>
+          </div>
+        </div>
+
+        <div style ="position: absolute; bottom: 0;right:0;">
+          <button *ngIf="stepIndex >= 1" class="btn btn-secondary" (click)="goBack()"><img alt="Go Back" style="text-align: left" src="/assets/prev.jpg"></button>
+          <button *ngIf="stepIndex > 0 && stepIndex <= questions.length" class="btn btn-success" (click)="goNext()">{{nextBtnText}}</button>
+        </div>
+      </div>
+      <!-- <img alt="Go Back" style="text-align: left" src="/assets/prev.jpg"> -->
+
+    </div>
+    
+    </div>
+    <br>
+
+    <div *ngIf="questions && (stepIndex > questions.length)">
+      <app-resultview>
+      </app-resultview>
+    </div>

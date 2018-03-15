@@ -1,0 +1,10 @@
+<div class="center-div-2" align="left">
+  <h2>Results</h2>
+  <div *ngFor="let question of questions">
+    <h3>{{question.index}}. {{question.title}}</h3>
+    <h3>Right Answer: {{question.answer}}</h3>
+  </div>
+  <h2>You have scored {{result.score}}% </h2>
+  <br>
+  <h2>{{result.status}}</h2>
+</div>

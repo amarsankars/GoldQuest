@@ -1,0 +1,8 @@
+<div style="top: 100px;" align="center">
+    <div class="center-div" align="left">
+      <ul *ngFor="let instruction of instructions">
+        <li>{{ instruction }}</li>
+      </ul>
+    </div>
+    <button class="btn btn-primary btn-lg" (click)="startQuiz()">Start Quiz</button>
+</div>
