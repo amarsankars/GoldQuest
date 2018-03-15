@@ -16,7 +16,7 @@
     "index": 3,
     "title": "Which one came first?",
     "choices": ["Egg", "Chicken", "Both", "Hypothetical"],
-    "answer": "Chicken",
+    "answer": "Egg",
     "userChoice": ""
   }, {
     "index": 4,
