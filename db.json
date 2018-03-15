@@ -1,7 +1,7 @@
-{ data:
+{ "data":
 [
     {
-    index: 1,
+    "index": 1,
     title: "Which is an even prime number?",
     choices: ["1", "2", "3", "4"],
     answer: "2",
