@@ -1,6 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+
 .center-div {
     margin: 0 auto;
     width: 600px;
     margin-top: 100px;
+}
+
+body {
+    background:#2E9CE6;
+    padding: 3em;
+    font-family: 'Raleway', 'Arial';
+    color:#fff;
+}
+
+h3 {
+    font-family: 'Raleway', 'Arial';
+    font-size: 12pt;
 }
